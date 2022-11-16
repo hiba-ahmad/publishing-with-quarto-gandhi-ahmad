@@ -40,4 +40,4 @@ The material in this repository is made available under the [MIT license](http:/
 
 ## Statement of contributions
 
-**Michelle Gandhi** and **Hiba Ahmad** prepared the the presentation slides and recording. They also provided excercises for better understanding.
+**Michelle Gandhi** and **Hiba Ahmad** prepared the presentation slides and recording in collaboration. They also provided excercises for better understanding.
