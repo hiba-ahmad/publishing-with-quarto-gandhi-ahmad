@@ -1,4 +1,4 @@
-# Working with dplyr
+# Publishing with Quarto
 
 
 ## Summary
