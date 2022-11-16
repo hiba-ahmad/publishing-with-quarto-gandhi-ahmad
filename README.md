@@ -11,20 +11,27 @@ This session will introduce you to the modern data wrangling workflow with R and
 
 ### Main learning objectives
 
-The goals of this session are to (1) equip you with conceptual knowledge about the dplyr package and data wrangling workflow, (2) show you the three key verbs of the pacakge, and (3) provide you with practice material as well as some further readings.
+The goals of this session are to 
+- equip you with conceptual knowledge about quarto 
+- show you how to author, render and publish quarto documents
+- enable you to work with publishing services like Quarto Pub
+- provide you with practice material as well as some further readings
 
 
 ## Instructors
 
-- Simon Munzert ([website](http://simonmunzert.github.io/), [twitter](https://twitter.com/simonsaysnothin))
-- Kermit the Frog ([website](https://en.wikipedia.org/wiki/Kermit_the_Frog), [twitter](https://twitter.com/KermitTheFrog))
+- Michelle Gandhi ([Linkedin](https://www.linkedin.com/in/michellegandhi/))
+- Hiba Ahmad ([Linkedin](https://www.linkedin.com/in/hibaahmad/))
 
 
 ## Further resources
 
-- [dplyr overview at dplyr.tidyverse.org](https://dplyr.tidyverse.org/)
-- [Hands-on dplyr tutorial by Data School on YouTube](https://www.youtube.com/watch?v=jWjqLW-u3hc)
-- [R for Data Science book - part on data wrangling](https://r4ds.had.co.nz/wrangle-intro.html)
+- https://quarto.org
+- https://github.com/mcanouil/awesome-quarto
+- https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/1-welcome-to-quarto/
+- https://mine.quarto.pub/hello-quarto/#/hello-quarto-title
+- https://www.youtube.com/watch?v=hbf7Ai3jnxY
+- https://happygitwithr.com (for collaboration in Quarto)
 
 
 ## License
@@ -33,6 +40,4 @@ The material in this repository is made available under the [MIT license](http:/
 
 ## Statement of contributions
 
-**Simon Munzert** prepared the practice material and post-processed the recording.
-
-**Kermit the Frog** prepared the presentation slides and recording. He also provided an example to the practice material.
+**Michelle Gandhi** and **Hiba Ahmad** prepared the the presentation slides and recording. They also provided excercises for better understanding.
