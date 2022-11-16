@@ -1,0 +1,4 @@
+- source: IDS_Directory.qmd
+  quarto-pub:
+    - id: 4042ca15-378c-48f5-a7c2-0f482a0f89ab
+      url: 'https://quartopub.com/sites/hiba/publishing-with-quarto-c3c8'

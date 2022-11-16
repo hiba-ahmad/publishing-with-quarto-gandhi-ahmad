@@ -1,0 +1,476 @@
+---
+title: "Publishing with Quarto"
+subtitle: "Introduction to Data Science Workshop"
+author: Hiba Ahmad<br>Michelle Gandhi<br>21 Novemeber 2022
+format: 
+  insper-revealjs:
+    incremental: true
+    self-contained: true
+    transition: slide
+    background-transition: fade
+    footer: Hertie School - Introduction to Data Science
+date-format: long
+lang: en
+execute:
+  freeze: true
+  echo: true
+---
+
+## Table of Contents
+
+::: incremental
+-   Hello Quarto!
+
+-   Key Features
+
+-   R Markdown v/s Quarto
+
+-   Publishing with Quarto
+
+-   What can you Publish?
+
+-   Authoring Quarto Documents
+
+-   Rendering Quarto Documents
+
+-   Publishing Services
+
+-   Quarto Pub: An Overview
+
+-   Publishing using Quarto Pub
+
+-   Additional Resources
+:::
+
+# What is Quarto?
+
+## **Hello Quarto!**
+
+<br>
+
+Quarto® is an open-source, scientific and technical publishing system built on Pandoc.
+
+<br>
+
+::: {.fragment .fade-in}
+It allows a user to:
+:::
+
+::: incremental
+-   Create dynamic content with Python, R, Julia, and Observable, [as well as computing languages that don't even exist at the moment]{style="color:teal"}.
+
+-   Author documents as plain text markdown or Jupyter notebooks.
+
+-   Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+
+-   The [goal of Quarto]{style="color:teal"} is to make the process of creating and collaborating dramatically better by unifying and extending the RMarkdown ecosystem!
+:::
+
+## The Big Picture!
+
+<br>
+
+Quarto and R Markdown share the same core team of developers - [Carlos Scheidegger, Charles Teague, Christophe Dervirvieux, J.J. Allaire, Yihui Xie]{style="color:teal"}
+
+![Quarto Universe](IDS01.jpg){width="84%"}[^1]
+
+[^1]: https://jthomasmock.github.io/quarto-2hr-webinar/materials/01-intro-quarto.html#/quarto-is-a-big-universe
+
+<br>
+
+## Key Features: The Next Gen R Markdown
+
+<br>
+
+::: incremental
+-   Knitr started in 2011
+
+-   RMarkdown started in 2014
+
+-   Learnt from [10+years of literate programming with knitr + R Markdown]{style="color:teal"}
+:::
+
+![](features.png){.absolute bottom="0" right="50" width="400" height="400"}
+
+## Quarto \>\>\> R Markdown
+
+<br>
+
+-   Quarto and its enhancements are inbuilt with RStudio; no download necessary
+
+-   Quarto allows [unified syntax]{style="color:teal"} regardless of [input format, engine and language]{style="color:teal"}
+
+-   40 different outputs available
+
+-   Better accessibility and richer features
+
+-   Quarto doesn't rely on mandatory R run time
+
+<br>
+
+-   [That said, if you heavily use access tools built around R Markdown such as blogdown, xaringan, workflowr and papaja, R Markdown might be better suited for you!]{style="color:teal"}
+
+# Publishing with Quarto
+
+## Publishing with Quarto
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-maroon}
+Author \> Render \> Publish
+:::
+:::
+
+-   Quarto uses an engine like knitr to [execute code]{style="color:teal"} and [generate a temporary output(.md).]{style="color:teal"}. The .md file is [processed via Pandoc & Quarto's Lua filters]{style="color:teal"} to convert to a [final output]{style="color:teal"}.
+
+-   Multiple ways to publish documents, presentations, websites and more created using Quarto.
+
+-   Output in standard formats such as HTML, PDF, MS Word etc. ensures that it can be published anywhere.
+
+-   Quarto publish command publishes easily to various services such as GitHub, Netlify, RStudio Connect, etc.
+
+-   Various other tools to publish from a Continuous Integration (CI) system.
+
+## Publishing with Quarto: The Process
+
+![](IDS06.jpg)[^2]
+
+[^2]: https://mine.quarto.pub/hello-quarto/#/quarto-cli-orchestrates-each-step-of-rendering
+
+## What can you publish?
+
+<br>
+
+Through literate programming, Quarto can publish - [presentations, websites, blogs, books and more]{style="color:teal"}!
+
+::: r-stack
+![](q_presentation.png){.fragment .fade-in-then-out width="60%"}
+
+![](q_website.png){.fragment .fade-in-then-out width="60%"}
+
+![](q_blog.png){.fragment .fade-in-then-out width="60%"}
+
+![](q_books.png){.fragment .fade-in-then-out width="60%"}
+:::
+
+# Authoring
+
+## Authoring Quarto Documents
+
+### *Elements of Markdown*
+
+<br>
+
+Markdown is designed to be easy to write, and, even more importantly, easy to read.
+
+**Text Formatting**
+
+```{r}
+#| code-fold: true
+## Markdown allows you to format text as **bold** or *italics*. You can 
+## also add superscripts^2^ or subscripts~2~, 
+## and display code `verbatim`.
+
+## You can also ~~strikethrough~~ text or present it in [caps]{.smallcaps}.
+```
+
+Markdown allows you to format text as **bold** or *italics*. You can also add superscripts^2^ or subscripts~2~, and display code `verbatim`.
+
+You can also ~~strikethrough~~ text or present it in [caps]{.smallcaps}.
+
+## Authoring Quarto Documents
+
+**Math**
+
+<br>
+
+Formulas in Quarto can be written using '\$'.
+
+<br>
+
+```{r}
+#| code-fold: true
+## The area of circle is $A = \pi r^2$
+## Basic algebra formula: $a^2- b^2 = (a+b)(a-b)$
+
+```
+
+<br>
+
+The area of circle is $A = \pi r^2$
+
+Basic algebra formula: $a^2- b^2 = (a+b)(a-b)$
+
+## Authoring Quarto Documents
+
+**Links and Images**
+
+<br>
+
+You can embed [links with names](https://quarto.org/) or direct urls like <https://quarto.org/>.
+
+For images, the syntax is as follows:
+
+```{r}
+#| code-fold: true
+## You can embed [links with names](https://quarto.org/) or
+## direct urls like <https://quarto.org/>.
+
+## For images, the syntax is ![Linking Images](IDS07.jpg){width="75%"}
+```
+
+![](IDS07.jpg){.absolute bottom="0" right="50" width="150" height="150"}
+
+## Authoring Quarto Documents
+
+**Tables**
+
+<br>
+
+**Personal Ranking of Fruits**
+
+```{r}
+#| code-fold: true
+#| fig-align: "center"
+## |          | Mango  | Apple  | Orange |
+## |:---------|:-------|-------:|:------:|
+## | Hiba     | 1      |      2 | 3      |
+## | Michelle | 2      |      3 | 1      | 
+  
+```
+
+|          | Mango | Apple | Orange |
+|:---------|:------|------:|:------:|
+| Hiba     | 1     |     2 |   3    |
+| Michelle | 2     |     3 |   1    |
+
+# Rendering
+
+## Rendering Quarto Documents
+
+<br>
+
+### **Way 1: Using the Render Button**
+
+<br>
+
+![](IDS08.jpg){width="60%"}
+
+## Rendering Quarto Documents
+
+<br>
+
+### **Way 2: Using the Command Line**
+
+<br>
+
+![](IDS09.jpg){width="60%"}
+
+## Rendering Quarto Documents
+
+<br>
+
+### **Way 1: Using the Quarto Package**
+
+<br>
+
+![](IDS10.jpg){width="60%"}
+
+## Short Exercise
+
+<br>
+
+::: incremental
+-   Download the material and open Coldplay.qmd.
+
+-   Render the file using any of the three above-mentioned ways.
+
+-   Do you see some cool features that are different from an .rmd file?
+:::
+
+## Solutions - we'll discuss these further in our tutorial!
+
+<br>
+
+::: columns
+::: {.column width="45%"}
+-   Automatically produces a table of contents<br>
+
+-   Links webpages<br>
+
+-   Links footnotes and the text<br>
+
+-   Text can be bold, italic, subscript and superscript<br>
+
+-   Option to strikethrough text<br>
+
+-   Can add tables<br>
+:::
+
+::: {.column width="55%"}
+-   Option to add ordered and unordered list<br>
+
+-   Option to use different types of headers<br>
+
+-   Can add images with captions<br>
+
+-   Can change alignment of text and images<br>
+
+-   Automatically adds page numbers to the file<br>
+:::
+:::
+
+# Publishing
+
+## Publishing Services
+
+<br>
+
+::: incremental
+-   **Quarto Pub:** A free publishing service for content created with Quarto - ideal for [blogs, course or project websites, books, presentations]{style="color:teal"}, and [personal hobby sites]{style="color:teal"}
+
+-   **GitHub Pages:** A website hosting service - enables publishing content based on [source code managed within a GitHub repository]{style="color:teal"}
+
+-   **RStudio Connect:** A publishing platform for secure sharing of data products [within an organization]{style="color:teal"} (rather than for public use)
+
+-   **Netlify:** A professional web publishing platform with support for many advanced features including [custom domains, authentication, branch previews, and instant rollbacks]{style="color:teal"} - a free plan ideal for personal projects, hobby sites, experiments
+
+-   **Other Services - Firebase, Site44, Amazon S3**
+:::
+
+## Quarto Pub: An Overview
+
+<br>
+
+There are two ways to publish content to [Quarto Pub](https://quartopub.com/)
+
+::: incremental
+-   Use the quarto publish command to publish content rendered on your local machine ([recommended approach for beginners]{style="color:teal"}).
+
+-   For GithHub users, use [GitHub Action](https://quarto.org/docs/publishing/quarto-pub.html#github-action) to automatically render your project and publish the resulting content whenever the code changes.
+:::
+
+::: {.fragment .fade-in}
+::: {.callout-note style="yellow" icon="false"}
+## Before you can publish anything, a (free) Quarto Pub account has to be created. We'll do this together in our tutorial!
+:::
+:::
+
+## Publishing Using Quarto Pub
+
+### Quarto Publish Command
+
+<br>
+
+Easiest way to publish locally rendered content -
+
+::: incremental
+-   **Step 1:** Check whether the terminal is at the directory where your project is located
+
+-   **Step 2:** Execute the quarto publish command for Quarto Pub. (In case of first publish, the command will prompt you to authenticate)
+:::
+
+::: {.fragment .fade-in}
+![](q_publish.png){width="60%"}
+:::
+
+::: {.fragment .fade-in}
+**The content will be [rendered and published]{style="color:teal"} on Quarto Pub, opening in a browser for your viewing.**
+:::
+
+## Publishing Using Quarto Pub
+
+### Quarto Publish Command - Management
+
+<br>
+
+::: {.fragment .fade-in}
+-   **Customizing Options:** alter behavior of quarto publish using the following options in the command line
+:::
+
+::: {.fragment .fade-in}
+![](q_prompt.png){width="60%"}
+:::
+
+::: {.fragment .fade-in}
+-   **Site Management:** change the "slug" (or URL path) of a published site, make a site the default one, or remove the site entirely using the site management interface at [https://quartopub.com](https://quartopub.com/)
+:::
+
+## Publishing Using Quarto Pub
+
+### Quarto Publish Command - Management
+
+<br>
+
+::: incremental
+-   **Multiple Accounts:** ensure being logged into the correct Quarto Pub account before publishing from the CLI
+
+-   **Access Tokens:** Quarto Pub uses an access token to grant permission for publishing to your account. List and remove saved accounts using the quarto publish accounts command, and view or revoke access tokens from the admin interface.
+:::
+
+## Publishing Using Quarto Pub
+
+### Github Action
+
+<br>
+
+Recommended way of rendering and publishing your site, if you prefer [execution to be automatically triggered from commits]{style="color:teal"}.
+
+::: incremental
+-   **Step 1:** Publish record by completing at least one publish using the quarto publish command.
+
+-   **Step 2:** Check project directory for a \_publish.yml file indicating your publishing destination
+:::
+
+::: {.fragment .fade-in}
+![](q_publish_yml.png){width="60%"}
+:::
+
+## Publishing Using Quarto Pub
+
+### Github Action
+
+<br>
+
+::: incremental
+-   **Step 3:** Freezing Computations - To make sure that your R code is only executed locally, configure your project to use Quarto's [freeze](https://quarto.org/docs/projects/code-execution.html#freeze) feature by adding [freeze: auto]{style="color:teal"} to your \_quarto.yml.
+:::
+
+::: {.fragment .fade-in}
+![](q_freeze.png){width="60%"}
+:::
+
+## Learn More Here
+
+<br>
+
+### Recommended Resources
+
+::: incremental
+-   https://quarto.org
+-   https://github.com/mcanouil/awesome-quarto
+:::
+
+<br>
+
+::: {.fragment .fade-in}
+### Optional Resources
+:::
+
+::: incremental
+1.  https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/1-welcome-to-quarto/
+2.  https://mine.quarto.pub/hello-quarto/#/hello-quarto-title
+3.  https://www.youtube.com/watch?v=hbf7Ai3jnxY
+4.  https://happygitwithr.com (for collaboration in Quarto)
+:::
+
+## Appendix
+
+1.  Bray, A. (n.d.). From R Markdown to Quarto - Welcome to Quarto. Retrieved November 16, 2022, from https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/1-welcome-to-quarto/
+
+2.  Cetinkaya-Rundel, M. (n.d.). Hello Quarto. Quarto.Pub. Retrieved November 16, 2022, from https://mine.quarto.pub/hello-quarto/#/hello-quarto-title
+
+3.  Mock, T. (2022, August 9). Welcome to Quarto Workshop! \| Led by Tom Mock, RStudio. YouTube. https://www.youtube.com/watch?v=yvi5uXQMvu4
+
+4.  Quarto. (n.d.). Quarto. Retrieved November 16, 2022, from https://quarto.org
+
+# This presentation has been made using the Quarto revealjs format.
