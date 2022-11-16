@@ -12,8 +12,8 @@ This session will introduce you to publishing with Quarto. It provides insights 
 ### Main learning objectives
 
 The goals of this session are to 
-- equip you with conceptual knowledge about quarto 
-- show you how to author, render and publish quarto documents
+- equip you with conceptual knowledge about Quarto 
+- show you how to author, render and publish Quarto documents
 - enable you to work with publishing services like Quarto Pub
 - provide you with practice material as well as some further readings
 
